@@ -1,0 +1,2 @@
+class Quad < ApplicationRecord
+end
