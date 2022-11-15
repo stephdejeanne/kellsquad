@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'quads/index'
+  get 'quads/show'
+  devise_for :users
   get 'quads/show'
   devise_for :users
   root to: "pages#home"
