@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  get 'quads/index'
-  get 'quads/show'
-  devise_for :users
-  get 'quads/show'
   devise_for :users
   root to: "pages#home"
+  resources :quads
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
