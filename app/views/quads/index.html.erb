@@ -1,3 +1,11 @@
+    <style>
+      .fuck {
+      display: flex;
+      }
+      .card{
+        margin: 15px;
+      }
+    </style>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.clubvillamar.fr/content/lloret-de-mar/wp-content/uploads/2021/01/Quad-huren-in-Lloret-de-Mar.jpg');">
   <div class="container">
@@ -5,9 +13,18 @@
     <p>Find me in app/views/quads/index.html.erb</p>
     <p>Change your life and learn to code at one of our campuses around the world.</p>
     <ul>
+    <div class="fuck">
       <% @quads.each do |quad| %>
-        <li><%= quad.name %></li>
-      <% end %>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> <%= quad.name %></h5>
+            <p class="card-text">Description</p>
+            <%= link_to 'Voir le quad', quad_path(quad), class: "btn btn-primary" %>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </ul>
   </div>
 </div>
