@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: "pages#home"
-  get 'quads/index'
-  get 'quads/show'
+  resources :quads
+
 end
