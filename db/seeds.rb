@@ -9,10 +9,10 @@ Quad.delete_all
 User.destroy_all
 
 p 'Creating quad'
-quads = Quad.create!([{ name: "Mango's quad", color: "red", power: 50 },
-  { name: "Pineappel's quad", color: "green", power: 45 },
-  { name: "Melon's quad", color: "blue", power: 40 },
-  { name: "Orange's quad", color: "orange", power: 35 }
+quads = Quad.create!([{ name: "Mango's quad", color: "red", power: 50, price: 150 },
+  { name: "Pineappel's quad", color: "green", power: 45, price: 160 },
+  { name: "Melon's quad", color: "blue", power: 40, price: 170 },
+  { name: "Orange's quad", color: "orange", power: 35, price: 180 }
   ])
 p "done bg #{Time.now}"
 sleep(1)
