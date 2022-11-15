@@ -1,20 +1,20 @@
 class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
-    @list = List.find(params[:list_id])
-    @review.list = @list
+    @list = Quad.find(params[:quad_id])
+    @review.quad = @quad
     if @review.save
-      redirect_to list_path(@list)
+      redirect_to quad_path(@quad)
     else
-      @bookmark = Bookmark.new
-      render 'lists/show', status: :unprocessable_entity
+      @booking = Booking.new
+      render 'quads/show', status: :unprocessable_entity
     end
   end
 
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to list_path(@review.list)
+    redirect_to quad_path(@review.quad)
   end
 
   private
