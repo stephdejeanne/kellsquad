@@ -1,16 +1,14 @@
-<h1>Quads#show - grand master Flash !!!</h1>
-<p>Find me in app/views/quads/show.html.erb</p>
+<h1>Le <%= @quad.name %></h1>
 
 <p>Couleur : <%= @quad.color %></p>
 <p>Puissance : <%= @quad.power %></p>
+<p>Prix :<%= @quad.price %> </p>
 
 <a class="btn btn-primary" href="#"> Réserver le NOW !!! </a>
 
 
 <div class="card-product">
-  <img src="https://images.unsplash.com/photo-1503438792824-0882f145c89d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cXVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" />
+  <img src=<%= @quad.img %> />
   <div class="card-product-infos">
-    <h2>Nom du quad : <%= @quad.name %></h2>
-    <p>Prix :<%= @quad.price %> <strong>relevant info</strong> only.</p>
   </div>
 </div>
