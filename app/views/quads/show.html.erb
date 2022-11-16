@@ -1,14 +1,14 @@
-<h1>Le <%= @quad.name %></h1>
-
-<p>Couleur : <%= @quad.color %></p>
-<p>Puissance : <%= @quad.power %></p>
-<p>Prix :<%= @quad.price %> </p>
-
-<a class="btn btn-primary" href="#"> Réserver le NOW !!! </a>
-
-
-<div class="card-product">
-  <img src=<%= @quad.img %> />
-  <div class="card-product-infos">
+<div class="card" style="width: 18rem;">
+  <img src=<%= @quad.img %> class="card-img-top" alt="photo du quad">
+  <div class="card-body">
+    <h5 class="card-title">Le <%= @quad.name %></h5>
+    <p class="card-text">
+    <ul>
+      <li>Couleur : <%= @quad.color %></li>
+      <li>Puissance : <%= @quad.power %> cv</li>
+      <li>Prix : <%= @quad.price %> €</li>
+    <ul></ul>
+    </p>
+    <a href="#" class="btn btn-primary">Réserver le NOW !!!</a>
   </div>
 </div>
