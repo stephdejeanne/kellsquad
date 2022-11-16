@@ -24,6 +24,9 @@ class BookingsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
   def set_quad
     @quad = Quad.find(params[:quad_id])
@@ -31,5 +34,9 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:start, :end)
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 end

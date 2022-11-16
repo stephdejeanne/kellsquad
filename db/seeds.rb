@@ -9,10 +9,10 @@ Quad.delete_all
 User.destroy_all
 
 p 'Creating quad'
-quads = Quad.create!([{ name: "Terminator", color: "black", power: 50, price: 150, free: true, img: "https://images.unsplash.com/photo-1549221279-aca391fb56d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cXVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" },
-  { name: "Classic", color: "blue", power: 45, price: 160 , free: true, img: "https://images.unsplash.com/photo-1553786815-138920395604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHF1YWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" },
-  { name: "Woman's friendly", color: "blue", power: 40, price: 170, free: true, img: "https://images.unsplash.com/photo-1516933857371-5a895d657803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHF1YWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" },
-  { name: "For the kid", color: "orange", power: 35, price: 180, free: true, img:"https://images.unsplash.com/photo-1532934133442-e9cb961676f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHF1YWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" }
+quads = Quad.create!([{ name: "Terminator", color: "black", power: 120, price: 210, free: true, img: "https://images.unsplash.com/photo-1549221279-aca391fb56d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cXVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" },
+  { name: "Classic", color: "blue", power: 70, price: 160 , free: true, img: "https://images.unsplash.com/photo-1503438792824-0882f145c89d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cXVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" },
+  { name: "Woman's friendly", color: "blue", power: 40, price: 110, free: true, img: "https://images.unsplash.com/photo-1516933857371-5a895d657803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHF1YWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" },
+  { name: "For the kid", color: "orange", power: 30, price: 90, free: true, img:"https://images.unsplash.com/photo-1532934133442-e9cb961676f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHF1YWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" }
   ])
 p "done bg #{Time.now}"
 sleep(1)
