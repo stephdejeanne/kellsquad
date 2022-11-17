@@ -1,0 +1,6 @@
+<%# <%= render "form", booking: @booking %>
+<%= simple_form_for [@quad, @booking] do |f| %>
+  <%= f.input :start %>
+  <%= f.input :end %>
+  <%= f.submit %>
+<% end %>

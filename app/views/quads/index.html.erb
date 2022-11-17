@@ -1,7 +1,41 @@
-<h1>Quads#index</h1>
-<p>Find me in app/views/quads/index.html.erb</p>
-<ul>
-  <% @quads.each do |quad| %>
-    <li><%= quad.name %></li>
-  <% end %>
-</ul>
+    <style>
+      .fuck {
+      display: flex;
+      }
+      .card{
+        margin: 15px;
+      }
+    </style>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.clubvillamar.fr/content/lloret-de-mar/wp-content/uploads/2021/01/Quad-huren-in-Lloret-de-Mar.jpg');">
+  <div class="container">
+    <h1>Wesh bro !!! Choisi ton quad - C'est trop d'la balle</h1>
+    <ul>
+    <div class="fuck">
+      <% @quads.each do |quad| %>
+        <div class="card" style="width: 18rem;">
+          <img src=<%= quad.img %> class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> <%= quad.name %></h5>
+            <p class="card-text"></p>
+            <%= link_to "Plus d'info", quad_path(quad), class: "btn btn-primary" %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
