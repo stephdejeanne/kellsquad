@@ -1,2 +1,13 @@
-<%= @booking.start %><br>
-<%= @booking.end %>
+<div class="card" style="width: 36rem;">
+  <img src=<%= @quad.img %> class="card-img-top" alt="photo du quad">
+  <div class="card-body">
+    <h5 class="card-title">Votre booking</h5>
+    <p class="card-text">
+    <ul>
+      <li>Début du booking : <%= @booking.start %></li>
+      <li>Fin du booking : <%= @booking.end %></li>
+    <ul></ul>
+    </p>
+  </div>
+</div>
+
