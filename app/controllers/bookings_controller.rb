@@ -1,10 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_quad, only: [:new, :create, :show]
   def index
+    # @quad = Quad.find(params[:quad_id])
     @bookings = Booking.all
   end
 
   def new
-    @quad = Quad.find(params[:quad_id])
     @booking = Booking.new
   end
   def show
@@ -13,18 +14,14 @@ class BookingsController < ApplicationController
 
   def create
     @quad = Quad.find(params[:quad_id])
-    arg = booking_params
-    arg[:user_id] = current_user.id
-    arg[:quad_id] = params[:quad_id]
-    @booking = Booking.new(arg)
-    if @booking.save!
-      redirect_to quad_bookings(@booking)
+    @booking = Booking.new(booking_params)
+    @booking.quad = @quad
+    @booking.user = current_user
+    if @booking.save
+      redirect_to root_path
     else
       render :new
     end
-  end
-
-  def show
   end
 
   private
