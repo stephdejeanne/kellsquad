@@ -1,6 +1,22 @@
 <%# <%= render "form", booking: @booking %>
-<%= simple_form_for [@quad, @booking] do |f| %>
-  <%= f.input :start %>
-  <%= f.input :end %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <h3>Réservez le Quad <%=@quad.name%> </h3>
+  <div class="d-flex justify-content-between" style="width: 36rem;" >
+    <div>
+      <img src=<%= @quad.img %>  alt="photo du quad" width="250">
+    </div>
+    <div>
+      <%= link_to "Choisir un autre Quad", quads_path, class: "btn btn-primary" %>
+      <div><p></p></div>
+      <%= link_to "Revoir les détails du Quad", quad_path(@quad), class: "btn btn-primary" %>
+    </div>
+  </div>
+  <div><p></p></div>
+  <div class="card" style="width: 36rem;">
+    <%= simple_form_for [@quad, @booking] do |f| %>
+      <%= f.input :start %>
+      <%= f.input :end %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
