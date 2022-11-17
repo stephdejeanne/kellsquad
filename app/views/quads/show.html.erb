@@ -1,6 +1,11 @@
 <div class="container">
-  <h3>Réservez le Quad <%=@quad.name%> </h3>
+  <h3> <%=@quad.name%> </h3>
   <div class="d-flex justify-content-between" style="width: 36rem;" >
+  <div style="width: 60%; height: 200px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="pk.eyJ1IjoiYm9vYnljb2RpZXBpZSIsImEiOiJjbGFpeml1ZW0wMHYwM3duaHJxdGptN2E0In0.an9b8aSfdUXToPCHUthvlQ">
+  </div>
     <div>
       <div class="card-body">
       <img src=<%= @quad.img %>  alt="photo du quad" width="250">
@@ -10,15 +15,10 @@
           <li>Prix : <%= @quad.price %> €</li>
         </ul>
         </p>
-        <a href="#" class="btn btn-primary">Réserver le NOW !!!</a>
+        <a href="#" class="btn btn-primary">Ajouter au panier</a>
       </div>
     </div>
   </div>
   </div>
   <div><p></p></div>
-  <div style="width: 60%; height: 200px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="pk.eyJ1IjoiYm9vYnljb2RpZXBpZSIsImEiOiJjbGFpeml1ZW0wMHYwM3duaHJxdGptN2E0In0.an9b8aSfdUXToPCHUthvlQ">
-  </div>
 </div>
