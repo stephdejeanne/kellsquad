@@ -15,7 +15,7 @@
           <li>Prix : <%= @quad.price %> €</li>
         </ul>
         </p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+        <a href="<%= "/quads/#{@quad.id}/bookings/new" %>" class="btn btn-primary">Ajouter au panier</a>
       </div>
     </div>
   </div>
