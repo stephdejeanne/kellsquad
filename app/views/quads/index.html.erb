@@ -7,22 +7,23 @@
       }
     </style>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.clubvillamar.fr/content/lloret-de-mar/wp-content/uploads/2021/01/Quad-huren-in-Lloret-de-Mar.jpg');">
+<div class="banner d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.clubvillamar.fr/content/lloret-de-mar/wp-content/uploads/2021/01/Quad-huren-in-Lloret-de-Mar.jpg');">
   <div class="container">
-    <ul>
-    <div class="fuck">
-      <% @quads.each do |quad| %>
-        <div class="card" style="width: 18rem;">
-          <img src=<%= quad.img %> class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"> <%= quad.name %></h5>
-            <p class="card-text"></p>
-            <%= link_to "Sélectionner", quad_path(quad), class: "btn btn-primary" %>
-          </div>
+
+      <ul>
+        <div class="fuck">
+          <% @quads.each do |quad| %>
+            <div class="card" style="width: 18rem;">
+              <img src=<%= quad.img %> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"> <%= quad.name %></h5>
+                <p class="card-text"></p>
+                <%= link_to "Sélectionner", quad_path(quad), class: "btn btn-primary" %>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <% end %>
-      </div>
-    </ul>
+      </ul>
   </div>
 </div>
 
@@ -33,8 +34,5 @@
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Exprimez votre adrénaline <i class="fas fa-heart"></i> KellSquad
   </div>
 </div>
