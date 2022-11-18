@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Quad.delete_all
 User.destroy_all
+Quad.delete_all
 
 p 'Creating quad'
 quads = Quad.create!([{ name: "Terminator", color: "black", power: 50, price: 150, free: true, img: "https://images.unsplash.com/photo-1549221279-aca391fb56d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cXVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60", address: "Rue de la République, 97200 Fort-de-France" },
