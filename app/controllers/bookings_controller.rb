@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_quad, only: [:new, :create, :show]
   def index
     # @quad = Quad.find(params[:quad_id])
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def new
@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.quad = @quad
     @booking.user = current_user
     if @booking.save
-      redirect_to root_path
+      redirect_to quad_bookings_path(@quad)
     else
       render :new
     end
