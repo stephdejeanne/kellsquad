@@ -1,24 +1,26 @@
 <div class="container">
-  <h3> <%=@quad.name%> </h3>
-  <div class="d-flex justify-content-between" style="width: 36rem;" >
-  <div style="width: 60%; height: 200px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="pk.eyJ1IjoiYm9vYnljb2RpZXBpZSIsImEiOiJjbGFpeml1ZW0wMHYwM3duaHJxdGptN2E0In0.an9b8aSfdUXToPCHUthvlQ">
-  </div>
-    <div>
+  <div class="row">
+    <div class="col-lg-6">
+  <!--<div class="d-flex justify-content-between" style="width: 54rem;" >-->
       <div class="card-body">
-      <img src=<%= @quad.img %>  alt="photo du quad" width="250">
+        <h3> Le Quad <%=@quad.name%> </h3>
+        <img src=<%= @quad.img %>  alt="photo du quad" width="500">
         <ul>
           <li>Couleur : <%= @quad.color %></li>
           <li>Puissance : <%= @quad.power %> cv</li>
-          <li>Prix : <%= @quad.price %> €</li>
+          <li>Prix : <%= @quad.price %> €/jour</li>
         </ul>
         </p>
         <a href="<%= "/quads/#{@quad.id}/bookings/new" %>" class="btn btn-primary">Ajouter au panier</a>
       </div>
     </div>
+    <div class="col-lg-6">
+      <h3> Balade sereine - Géolocalisation des Quads </h3>
+      <div style="width:100%; height: 200px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="pk.eyJ1IjoiYm9vYnljb2RpZXBpZSIsImEiOiJjbGFtaXplN3QwZTA5M29wZHpqcDBqYmVpIn0.CnSA-0O5rDyUWVuiBeySOQ">
+      </div>
+    </div>
   </div>
-  </div>
-  <div><p></p></div>
 </div>
