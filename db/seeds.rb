@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 User.destroy_all
+p 'Creating user'
+users = User.create!([{ name: "garry", email: "garry@gmail.com", password: "123456" },
+  { name: "kelly", email: "kelly@gmail.com", password: "123456" },
+  { name: "stephane", email: "stephane@gmail.com", password: "123456" },
+  ])
+puts 'done'
 Quad.delete_all
 
 p 'Creating quad'
@@ -17,10 +23,3 @@ quads = Quad.create!([{ name: "Terminator", color: "black", power: 50, price: 15
   ])
 p "done bg #{Time.now}"
 sleep(1)
-
-p 'Creating user'
-users = User.create!([{ name: "garry", email: "garry@gmail.com", password: "123456" },
-  { name: "kelly", email: "kelly@gmail.com", password: "123456" },
-  { name: "stephane", email: "stephane@gmail.com", password: "123456" },
-  ])
-puts 'done'
