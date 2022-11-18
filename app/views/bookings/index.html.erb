@@ -1,4 +1,16 @@
+<h3> Vos Réservations </h3>
 <% @bookings.each do |booking| %>
-  Votre booking commence le : <%= booking.start %><br>
-  Votre booking fini le : <%= booking.end %><br><br>
-<% end %>
+  <div class="card" style="width: 36rem;">
+    <h5 class="card-title">Quad <%=booking.quad.name%> réservé</h5>
+    <img src=<%= booking.quad.img %> class="card-img-top" alt="photo du quad">
+    <div class="card-body">
+      <p class="card-text">
+      <ul>
+        <li>Début du booking : <%= booking.start %></li>
+        <li>Fin du booking : <%= booking.end %></li>
+      <ul></ul>
+      </p>
+    </div>
+  <% end %>
+  <%= link_to "Retourner à la page d'accueil", root_path, class: "btn btn-primary" %>
+</div>

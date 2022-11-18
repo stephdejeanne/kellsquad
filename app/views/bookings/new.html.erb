@@ -11,11 +11,11 @@
     </div>
   </div>
   <div><p></p></div>
-  <div class="card" style="width: 36rem;">
+  <div id="new-booking" class="card" style="width: 36rem;">
     <%= simple_form_for [@quad, @booking] do |f| %>
       <%= f.input :start %>
       <%= f.input :end %>
-      <%= f.submit %>
+      <%= f.button :submit, 'Réserver', class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
